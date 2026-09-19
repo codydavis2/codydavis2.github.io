@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cody Davis :: Cloud Engineer</title>
+<meta name="description" content="Cody Davis — AWS Certified Cloud Practitioner and aspiring Cloud Engineer. Building reliable systems with Python, SQL, C and AWS. See my projects and book a call." />
+
+<!-- Social preview (LinkedIn / Facebook / X). og:image and og:url MUST be absolute URLs.
+     Replace https://REPLACE-WITH-YOUR-SITE-URL/ below with your deployed site URL (keep the trailing slash). -->
+<link rel="canonical" href="https://REPLACE-WITH-YOUR-SITE-URL/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cody Davis" />
+<meta property="og:title" content="Cody Davis — Cloud Engineer" />
+<meta property="og:description" content="AWS Certified Cloud Practitioner building reliable systems with Python, SQL, C and AWS. See my projects and book a call." />
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-SITE-URL/" />
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-SITE-URL/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Cody Davis — Cloud Engineer. AWS Certified Cloud Practitioner. Neon cyberpunk portfolio preview." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cody Davis — Cloud Engineer" />
+<meta name="twitter:description" content="AWS Certified Cloud Practitioner building reliable systems with Python, SQL, C and AWS." />
+<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-SITE-URL/assets/og-image.png" />
+<meta name="theme-color" content="#05050a" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300f6ff%22>&#9679;</text></svg>">
+
+<link rel="stylesheet" href="css/style.css" />
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ===== BOOT LOADER ===== -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">CD</div>
+    <div class="loader-lines" id="loaderLines"></div>
+    <div class="loader-bar"><span id="loaderProgress"></span></div>
+    <div class="loader-skip">click to skip</div>
+  </div>
+</div>
+
+<!-- ===== CUSTOM CURSOR ===== -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== AMBIENT 3D BACKGROUND ===== -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo" data-cursor-hover>
+    <span class="bracket">&lt;</span>CD<span class="bracket">/&gt;</span>
+  </a>
+  <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active" data-section="home" data-cursor-hover><span class="nav-index">00</span>Home</a></li>
+    <li><a href="#about" class="nav-link" data-section="about" data-cursor-hover><span class="nav-index">01</span>About</a></li>
+    <li><a href="#skills" class="nav-link" data-section="skills" data-cursor-hover><span class="nav-index">02</span>Skills</a></li>
+    <li><a href="#projects" class="nav-link" data-section="projects" data-cursor-hover><span class="nav-index">03</span>Projects</a></li>
+    <li><a href="#schedule" class="nav-link" data-section="schedule" data-cursor-hover><span class="nav-index">04</span>Schedule</a></li>
+    <li><a href="#contact" class="nav-link" data-section="contact" data-cursor-hover><span class="nav-index">05</span>Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" data-cursor-hover>Let's Talk</a>
+</nav>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section hero">
+    <div class="hero-content">
+      <p class="eyebrow"><span class="dot-pulse"></span> SYSTEM ONLINE — WELCOME TO MY NETWORK</p>
+      <h1 class="glitch-title" data-text="CODY DAVIS">CODY DAVIS</h1>
+      <div class="hero-role">
+        <span class="role-prefix">&gt;_</span>
+        <span id="typewriter" class="typewriter"></span>
+        <span class="caret">|</span>
+      </div>
+      <p class="hero-desc">
+        I design and build cloud-connected systems end to end — from the database up through
+        the interface — with a focus on reliability, clean architecture, and solving real
+        operational problems.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" data-cursor-hover>
+          <span>View Projects</span>
+        </a>
+        <a href="#schedule" class="btn btn-ghost" data-cursor-hover>
+          <span>📅 Schedule a Call</span>
+        </a>
+      </div>
+      <div class="hero-stack">
+        <span>C</span><span>HTML</span><span>TYPESCRIPT</span><span>PYTHON</span><span>SQL</span><span>AWS</span>
+      </div>
+    </div>
+    <div class="scroll-indicator" data-cursor-hover>
+      <span>SCROLL</span>
+      <div class="scroll-line"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about">
+    <div class="section-head" data-reveal>
+      <span class="section-tag">01 // ABOUT</span>
+      <h2>Who I Am</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="terminal-window" data-reveal>
+        <div class="terminal-titlebar">
+          <span class="tb-dot red"></span><span class="tb-dot yellow"></span><span class="tb-dot green"></span>
+          <span class="tb-title">cody@portfolio:~</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="output">cody_davis — aspiring cloud engineer</p>
+          <p><span class="prompt">$</span> cat mission.txt</p>
+          <p class="output">
+            Breaking into tech by building real, working systems — not just tutorials.
+            I like taking a messy manual process and turning it into something reliable,
+            automated, and easy to use.
+          </p>
+          <p><span class="prompt">$</span> cat ./certifications.txt</p>
+          <p class="output">AWS Certified Cloud Practitioner ✓</p>
+          <p><span class="prompt">$</span> ls ./currently_learning</p>
+          <p class="output list">ci_cd_pipelines/  containerization/  system_design/  aws_solutions_architect/</p>
+          <p><span class="prompt">$</span> <span class="terminal-cursor-blink">_</span></p>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="info-card" data-reveal>
+          <div class="info-icon">🎯</div>
+          <h3>Focused</h3>
+          <p>Targeting cloud engineering roles — building the infrastructure and systems that keep products running.</p>
+        </div>
+        <div class="info-card" data-reveal>
+          <div class="info-icon">🛠️</div>
+          <h3>Hands-On</h3>
+          <p>I learn by shipping. Every project on this site is a real, working system I built end to end.</p>
+        </div>
+        <div class="info-card" data-reveal>
+          <div class="info-icon">🚀</div>
+          <h3>Ready</h3>
+          <p>Actively looking for my first role in tech — motivated, adaptable, and quick to pick up new stacks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills">
+    <div class="section-head" data-reveal>
+      <span class="section-tag">02 // SKILLS</span>
+      <h2>Tech Radar</h2>
+      <p class="section-sub">Drag the sphere. Every tag is something I actively use.</p>
+      <div class="cert-badge" data-cursor-hover>
+        <span class="cert-badge-icon">✓</span>
+        <span class="cert-badge-text">
+          <strong>AWS Certified</strong> Cloud Practitioner
+        </span>
+      </div>
+    </div>
+
+    <div class="skills-layout">
+      <div class="sphere-stage" data-reveal>
+        <div class="sphere-perspective">
+          <div class="sphere" id="skillSphere"></div>
+        </div>
+        <div class="sphere-glow"></div>
+      </div>
+
+      <div class="skills-columns">
+        <div class="skill-col" data-reveal>
+          <h3><span class="col-icon">◆</span> Frontend</h3>
+          <ul class="skill-list">
+            <li><span>TypeScript</span><div class="bar"><i style="--w:82%"></i></div></li>
+            <li><span>CSS / Responsive UI</span><div class="bar"><i style="--w:90%"></i></div></li>
+            <li><span>HTML5</span><div class="bar"><i style="--w:92%"></i></div></li>
+            <li><span>JavaScript</span><div class="bar"><i style="--w:75%"></i></div></li>
+            <li><span>Bootstrap</span><div class="bar"><i style="--w:70%"></i></div></li>
+            <li><span>DevTools & Debugging</span><div class="bar"><i style="--w:72%"></i></div></li>
+          </ul>
+        </div>
+        <div class="skill-col" data-reveal>
+          <h3><span class="col-icon">◆</span> Backend</h3>
+          <ul class="skill-list">
+            <li><span>Node.js</span><div class="bar"><i style="--w:80%"></i></div></li>
+            <li><span>Python</span><div class="bar"><i style="--w:85%"></i></div></li>
+            <li><span>C</span><div class="bar"><i style="--w:65%"></i></div></li>
+            <li><span>SQL Databases</span><div class="bar"><i style="--w:87%"></i></div></li>
+            <li><span>REST APIs</span><div class="bar"><i style="--w:83%"></i></div></li>
+          </ul>
+        </div>
+        <div class="skill-col" data-reveal>
+          <h3><span class="col-icon">◆</span> Cloud / DevOps</h3>
+          <ul class="skill-list">
+            <li><span>AWS Core Services (EC2, S3, Lambda)</span><div class="bar"><i style="--w:68%"></i></div></li>
+            <li><span>AWS IAM & Security</span><div class="bar"><i style="--w:66%"></i></div></li>
+            <li><span>Cloud Economics & Billing</span><div class="bar"><i style="--w:65%"></i></div></li>
+            <li><span>CI / CD</span><div class="bar"><i style="--w:72%"></i></div></li>
+            <li><span>Git / Version Control</span><div class="bar"><i style="--w:90%"></i></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects">
+    <div class="section-head" data-reveal>
+      <span class="section-tag">03 // PROJECTS</span>
+      <h2>Things I've Built</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="tilt-card featured" data-reveal data-cursor-hover>
+        <div class="card-glow"></div>
+        <div class="card-top">
+          <span class="card-status">● COMPLETED</span>
+          <span class="card-index">01</span>
+        </div>
+        <h3>Dot-Tracker</h3>
+        <p class="card-desc">
+          A full-spectrum, web-based fleet tracking app covering inspections, work orders, scheduling,
+          and inventory in one place — built with an emphasis on simplifying DOT compliance for
+          fleet operators.
+        </p>
+        <ul class="card-tags">
+          <li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li><li>DOT Compliance</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/codydavis2/dot-tracker" target="_blank" rel="noopener noreferrer" class="card-link" data-cursor-hover>View Source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="tilt-card" data-reveal data-cursor-hover>
+        <div class="card-glow"></div>
+        <div class="card-top">
+          <span class="card-status">● COMPLETED</span>
+          <span class="card-index">02</span>
+        </div>
+        <h3>Doro Ad Designer</h3>
+        <p class="card-desc">
+          A simplified ad design tool for building ads quickly and by hand, with no AI
+          generation. Upload your own images, work from layouts in the browser, and save
+          designs to a database to come back to later.
+        </p>
+        <ul class="card-tags">
+          <li>JavaScript</li><li>Python</li><li>Flask</li><li>SQLite</li><li>HTML</li><li>CSS</li>
+        </ul>
+        <div class="card-links">
+          <a href="https://github.com/codydavis2/doro_ad_designer" target="_blank" rel="noopener noreferrer" class="card-link" data-cursor-hover>View Source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="tilt-card" data-reveal data-cursor-hover>
+        <div class="card-glow"></div>
+        <div class="card-top">
+          <span class="card-status">● COMPLETED</span>
+          <span class="card-index">03</span>
+        </div>
+        <h3>Doro Inventory Tracker</h3>
+        <p class="card-desc">
+          A standalone inventory tracker with profit tracking, item location logging, and
+          low-inventory notifications, built under my own brand, Doro.
+        </p>
+        <ul class="card-tags">
+          <li>JavaScript</li><li>Python</li><li>Bootstrap</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section id="schedule" class="section schedule">
+    <div class="section-head" data-reveal>
+      <span class="section-tag">04 // SCHEDULE</span>
+      <h2>Book a Call</h2>
+      <p class="section-sub">Grab a slot directly on my calendar — no back-and-forth emails.</p>
+    </div>
+
+    <div class="schedule-panel" data-reveal>
+      <div class="schedule-panel-glow"></div>
+      <div id="scheduleWidget" class="schedule-widget">
+        <!-- Calendly (or placeholder) injected here by js/schedule.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact">
+    <div class="contact-grid">
+      <div class="contact-copy" data-reveal>
+        <span class="section-tag">05 // CONTACT</span>
+        <h2>Let's Build<br/>Something.</h2>
+        <p>Open to cloud engineering roles, internships, and anything that lets me ship real systems. I usually reply within a day.</p>
+      </div>
+
+      <div class="contact-links" data-reveal>
+        <a class="contact-item" href="#schedule" data-cursor-hover>
+          <span class="ci-label">Book</span>
+          <span class="ci-value">Schedule a call</span>
+          <span class="ci-arrow">📅</span>
+        </a>
+        <a class="contact-item" href="mailto:cody.davis5614@gmail.com" data-cursor-hover>
+          <span class="ci-label">Email</span>
+          <span class="ci-value">cody.davis5614@gmail.com</span>
+          <span class="ci-arrow">↗</span>
+        </a>
+        <a class="contact-item" href="https://github.com/codydavis2" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+          <span class="ci-label">GitHub</span>
+          <span class="ci-value">github.com/codydavis2</span>
+          <span class="ci-arrow">↗</span>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/cody-davis-257436426" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+          <span class="ci-label">LinkedIn</span>
+          <span class="ci-value">in/cody-davis-257436426</span>
+          <span class="ci-arrow">↗</span>
+        </a>
+        <a class="contact-item" href="assets/Cody-Davis-Resume.pdf" target="_blank" rel="noopener noreferrer" data-cursor-hover>
+          <span class="ci-label">Resume</span>
+          <span class="ci-value">View / download PDF</span>
+          <span class="ci-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Cody Davis — Built from scratch with Three.js.</p>
+    </footer>
+  </section>
+
+</main>
+
+<script type="module" src="js/scene.js"></script>
+<script type="module" src="js/main.js"></script>
+<script src="js/schedule.js"></script>
+</body>
+</html>
