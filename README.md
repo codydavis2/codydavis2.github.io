@@ -20,9 +20,13 @@ imports from the local filesystem.)
 
 ## Deploy it
 
-It's fully static — drag the `portfolio` folder onto **Netlify** or
-**Vercel**, or push it to a GitHub repo and enable **GitHub Pages**. No build
-command needed; the publish directory is the project root.
+Live at **https://codydavis2.github.io/**, served by GitHub Pages from the
+`main` branch of `codydavis2/codydavis2.github.io`. To publish an update, commit
+and push to `main` — it goes live in about a minute:
+
+```bash
+git add -A && git commit -m "Describe the change" && git push
+```
 
 ## Customize
 
@@ -40,12 +44,11 @@ command needed; the publish directory is the project root.
 
 The social preview tags are in the `<head>` of [index.html](index.html) and
 the image is [assets/og-image.png](assets/og-image.png). Crawlers need
-**absolute** URLs, so after deploying, replace every
-`https://REPLACE-WITH-YOUR-SITE-URL/` in `index.html` with your real site URL
-(keep the trailing slash), then redeploy. Afterwards, run your link through
-LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/) to
-refresh its cache — LinkedIn caches previews, so re-inspect after any change
-to the title, description or image.
+**absolute** URLs, so they point at `https://codydavis2.github.io/` — update
+them if the site ever moves. Run your link through LinkedIn's
+[Post Inspector](https://www.linkedin.com/post-inspector/) to refresh its
+cache — LinkedIn caches previews, so re-inspect after any change to the
+title, description or image.
 
 ## Already configured
 
